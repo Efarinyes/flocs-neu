@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postal</title>
+    <style>
+        .floc {
+            position: fixed;
+            color: red;
+            top: 0%;
+            left: 40px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <span class='floc'>&#x2744;</span>
+    <span class='floc'>&#x2744;</span>
+    <span class='floc'>&#x2744;</span>
+    <span class='floc'>&#x2744;</span>
+   
+    <script>
+
+        document.querySelectorAll('.floc')
+            .forEach((floc) => {
+                floc.style.top = '-10%';
+                floc.style.left = 100*Math.random() + '%';
+                setInterval(() => {
+                    incrementar(2 * Math.random());
+                }, 100);
+          
+        function incrementar(quantitat) {
+            let top = parseInt(floc.style.top);
+            let left = parseInt(floc.style.left);
+            floc.style.left = left + quantitat + '%';
+            floc.style.top = top + quantitat + '%';
+            if (top + quantitat >= 100) {
+                floc.style.top = '-10%';
+            }
+            console.log(floc.style.top);
+        }
+    })
+
+    </script>
+</body>
+
+</html>
