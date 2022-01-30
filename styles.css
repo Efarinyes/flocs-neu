@@ -1,0 +1,23 @@
+body {
+  width: 80%;
+  font-family: "Lato", sans-serif;
+  color: snow;
+}
+.floc {
+  position: fixed;
+  color: snow;
+  top: 0%;
+  left: 40px;
+  font-size: xx-large;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-image: url("img/fondo.jpeg");
+  background-repeat: no-repeat;
+}
